@@ -141,9 +141,14 @@ public class RNNotificationsModule extends ReactContextBaseJavaModule implements
     }
 
     protected void startFcmIntentService(String extraFlag) {
-        final Context appContext = getReactApplicationContext().getApplicationContext();
-        final Intent tokenFetchIntent = new Intent(appContext, FcmInstanceIdRefreshHandlerService.class);
-        tokenFetchIntent.putExtra(extraFlag, true);
-        appContext.startService(tokenFetchIntent);
+        if (((ReactAppLifecycleFacade) AppLifecycleFacadeHolder.get()).isAppVisible()) {
+            final Context appContext = getReactApplicationContext().getApplicationContext();
+            final Intent tokenFetchIntent = new Intent(appContext, FcmInstanceIdRefreshHandlerService.class);
+            tokenFetchIntent.putExtra(extraFlag, true);
+            Log.v(LOGTAG, "Will start FcmIntentService");
+            appContext.startService(tokenFetchIntent);
+        } else {
+            Log.v(LOGTAG, "Skipping FcmIntentService");
+        }
     }
 }
