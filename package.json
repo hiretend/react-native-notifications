@@ -1,5 +1,5 @@
 {
-  "name": "react-native-notifications",
+  "name": "@hiretend/react-native-notifications",
   "version": "3.3.1",
   "description": "Advanced Push Notifications (Silent, interactive notifications) for iOS & Android",
   "author": "Lidan Hifi <lidan.hifi@gmail.com>",
@@ -80,6 +80,7 @@
     "type": "git",
     "url": "ssh://git@github.com/hiretend/react-native-notifications.git"
   },
+  "prepare": "npm build",
   "homepage": "https://github.com/wix/react-native-notifications",
   "bugs": {
     "url": "https://github.com/wix/react-native-notifications/issues"
