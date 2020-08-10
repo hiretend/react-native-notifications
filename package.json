@@ -1,6 +1,6 @@
 {
-  "name": "react-native-notifications",
-  "version": "3.3.1",
+  "name": "@hiretend/react-native-notifications",
+  "version": "3.3.1-beta",
   "description": "Advanced Push Notifications (Silent, interactive notifications) for iOS & Android",
   "author": "Lidan Hifi <lidan.hifi@gmail.com>",
   "license": "MIT",
@@ -74,11 +74,11 @@
     "@types/lodash": "4.14.153"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://npm.pkg.github.com/"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wix/react-native-notifications.git"
+    "url": "ssh://git@github.com/hiretend/react-native-notifications.git"
   },
   "homepage": "https://github.com/wix/react-native-notifications",
   "bugs": {
