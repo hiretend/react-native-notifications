@@ -19,7 +19,7 @@ public class FcmInstanceIdRefreshHandlerService extends JobIntentService {
 
     @Override
     protected void onHandleWork(@NonNull Intent intent) {
-        Log.v(LOGCAT, 'Handling FCM token refresh');
+        Log.v(LOGCAT, "Handling FCM token refresh");
         IFcmToken fcmToken = FcmToken.get(this);
         if (fcmToken == null) {
             return;
